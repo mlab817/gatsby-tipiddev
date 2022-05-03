@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
@@ -13,14 +12,8 @@ import { MetaData } from '../components/common/meta'
 * This file renders a single post and loads all the content.
 *
 */
-const Post = ({ siteUrl, data, location }) => {
+const Post = ({ data, location }) => {
     const post = data.ghostPost
-
-    const disqusConfig = {
-        url: `${siteUrl+location.pathname}`,
-        identifier: post.id,
-        title: post.title
-    }
 
     return (
         <>
@@ -49,12 +42,6 @@ const Post = ({ siteUrl, data, location }) => {
                             />
                         </section>
                     </article>
-                </div>
-                <hr/>
-                <div className="container">
-                    <h2>Comments (<CommentCount config={disqusConfig} placeholder={'0'} />)</h2>
-
-                    <Disqus config={disqusConfig} />
                 </div>
             </Layout>
         </>

@@ -66,12 +66,6 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-disqus`,
-            options: {
-                shortname: `tipiddev`
-            }
-        },
-        {
             resolve: `gatsby-source-ghost`,
             options:
                 process.env.NODE_ENV === `development`
