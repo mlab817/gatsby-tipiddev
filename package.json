@@ -26,7 +26,8 @@
     "build": "gatsby build",
     "dev": "yarn clean && gatsby develop",
     "lint": "eslint . --ext .js --cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node_modules/netlify-cli/bin/run deploy --dir=public --prod"
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
@@ -54,6 +55,7 @@
     "gatsby-source-ghost": "4.2.4",
     "gatsby-transformer-sharp": "3.12.0",
     "lodash": "4.17.21",
+    "netlify-cli": "^10.1.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-helmet": "6.1.0",
