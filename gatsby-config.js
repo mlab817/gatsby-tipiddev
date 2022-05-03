@@ -60,6 +60,18 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {
+            resolve: `gatsby-plugin-google-adsense`,
+            options: {
+                publisherId: `ca-pub-9440375821300607`
+            }
+        },
+        {
+            resolve: `gatsby-plugin-disqus`,
+            options: {
+                shortname: `tipiddev`
+            }
+        },
+        {
             resolve: `gatsby-source-ghost`,
             options:
                 process.env.NODE_ENV === `development`
